@@ -7,7 +7,7 @@
     <h2 class="popup__title" id="consultation-title">Заявка на консультацию</h2>
     <p class="popup__subtitle">Оставьте заявку ниже и в течение 10 минут с вами свяжется наш специалист и ответит на все вопросы</p>
 
-    <form class="popup__form" action="#" method="post">
+    <form class="popup__form" action="send-max.php" method="post" data-lead-form data-lead-title="Заявка на консультацию">
       <label class="popup__field">
         <span class="popup__field-label">Ваше имя</span>
         <input type="text" name="name" placeholder="Ваше имя" autocomplete="name">
@@ -27,6 +27,7 @@
       </label>
 
       <button class="popup__submit" type="submit">Получить консультацию</button>
+      <p class="popup__message" data-lead-message hidden></p>
     </form>
   </div>
 </div>

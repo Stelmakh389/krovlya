@@ -3,13 +3,13 @@
     Получите <span>расчёт стоимости </span> монтажа вашей кровли
   </h2>
 
-  <div class="roof-quiz" data-quiz>
+  <div class="roof-quiz" data-quiz data-quiz-lead-type="roof_quiz" data-quiz-goal="lead_form_submit">
     <div class="roof-quiz__main">
       <div class="roof-quiz__progress" aria-live="polite">
         <div class="roof-quiz__progress-track">
           <span class="roof-quiz__progress-fill" data-quiz-progress></span>
         </div>
-        <span class="roof-quiz__progress-text" data-quiz-progress-text>Расчет пройден на 14%</span>
+        <span class="roof-quiz__progress-text" data-quiz-progress-text>Расчет пройден на 17%</span>
       </div>
 
       <article class="roof-quiz__step is-active" data-quiz-step="0">
@@ -18,15 +18,24 @@
 
         <div class="roof-quiz__cards roof-quiz__cards--three">
           <button class="roof-quiz__card is-selected" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/service-install.webp" alt="Монтаж кровли" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Монтаж кровли</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/service-repair.webp" alt="Ремонт кровли" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Ремонт кровли</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/service-turnkey.webp" alt="Крыша под ключ" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Крыша под ключ</strong>
           </button>
         </div>
@@ -38,27 +47,45 @@
 
         <div class="roof-quiz__cards">
           <button class="roof-quiz__card is-selected" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-metal.webp" alt="Металлочерепица" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Металлочерепица</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-tile.webp" alt="Черепица" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Черепица</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-faltz.webp" alt="Фальцевая кровля" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Фальцевая</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-soft.webp" alt="Мягкая кровля" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Мягкая кровля</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-profnastil.webp" alt="Профнастил" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Профнастил</strong>
           </button>
           <button class="roof-quiz__card" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder">Фото<span class="roof-quiz__check" aria-hidden="true"></span></span>
+            <span class="roof-quiz__placeholder">
+              <img src="assets/img/quiz/material-ondulin.webp" alt="Ондулин" loading="lazy" decoding="async">
+              <span class="roof-quiz__check" aria-hidden="true"></span>
+            </span>
             <strong>Ондулин</strong>
           </button>
         </div>
@@ -107,34 +134,11 @@
         </div>
       </article>
 
-      <article class="roof-quiz__step" data-quiz-step="5" hidden>
-        <span class="roof-quiz__badge">Вопрос 6</span>
-        <h3 class="roof-quiz__question">Выберите подарок, который хотите получить</h3>
-
-        <div class="roof-quiz__cards roof-quiz__cards--three">
-          <button class="roof-quiz__card roof-quiz__card--gift is-selected" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder roof-quiz__placeholder--dark">270x300<span class="roof-quiz__check" aria-hidden="true"></span></span>
-            <strong>Название подарка 1</strong>
-            <small>Стоимость отдельно: <b>15 000 руб</b></small>
-          </button>
-          <button class="roof-quiz__card roof-quiz__card--gift" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder roof-quiz__placeholder--dark">270x300<span class="roof-quiz__check" aria-hidden="true"></span></span>
-            <strong>Название подарка 2</strong>
-            <small>Стоимость отдельно: <b>10 000 руб</b></small>
-          </button>
-          <button class="roof-quiz__card roof-quiz__card--gift" type="button" data-quiz-option>
-            <span class="roof-quiz__placeholder roof-quiz__placeholder--dark">270x300<span class="roof-quiz__check" aria-hidden="true"></span></span>
-            <strong>Название подарка 3</strong>
-            <small>Стоимость отдельно: <b>10 000 руб</b></small>
-          </button>
-        </div>
-      </article>
-
-      <article class="roof-quiz__step roof-quiz__step--final" data-quiz-step="6" hidden>
+      <article class="roof-quiz__step roof-quiz__step--final" data-quiz-step="5" hidden>
         <span class="roof-quiz__badge">Расчет готов</span>
         <h3 class="roof-quiz__question">Где вам удобней получить расчет стоимости?</h3>
 
-        <form class="roof-quiz__form" data-quiz-form>
+        <form class="roof-quiz__form" action="send-max.php" method="post" data-quiz-form>
           <div class="roof-quiz__messengers" role="group" aria-label="Способ связи">
             <button class="roof-quiz__messenger is-selected" type="button" data-quiz-option>
               <span>✈</span>
@@ -178,7 +182,7 @@
 
     <aside class="roof-quiz__side">
       <div class="roof-quiz__status">Онлайн</div>
-      <img class="roof-quiz__manager" src="assets/img/quiz-manager.png" alt="Станислав Резников" loading="lazy" decoding="async">
+      <img class="roof-quiz__manager" src="assets/img/quiz-manager.webp" alt="Станислав Резников" loading="lazy" decoding="async">
       <div class="roof-quiz__name">Станислав Резников</div>
       <p class="roof-quiz__side-text">
         Отвечайте на вопросы и получите скидку + подробную смету
@@ -186,7 +190,6 @@
       <div class="roof-quiz__side-bottom">
         <strong>В конце получите:</strong>
         <span class="roof-quiz__bonus">Подробная смета <i aria-hidden="true">🔒</i></span>
-        <span class="roof-quiz__bonus">Подарок <i aria-hidden="true">🔒</i></span>
       </div>
     </aside>
   </div>

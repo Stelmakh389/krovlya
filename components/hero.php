@@ -14,7 +14,7 @@
         <p>Ответьте на 5 вопросов и получите полный расчет стоимости и <strong>скидку до 15%</strong> на монтаж и доставку</p>
       </div>
 
-      <a class="hero__button" href="#calculate" data-popup-open="consultation">Рассчитать стоимость</a>
+      <a class="hero__button" href="#quiz">Рассчитать стоимость</a>
 
       <ul class="hero__benefits">
         <li class="hero__benefit">

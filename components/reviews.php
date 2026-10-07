@@ -39,7 +39,7 @@ $reviews = [
 ];
 ?>
 
-<section class="reviews-section">
+<section class="reviews-section" id="reviews">
   <h2 class="reviews-section__title">Главный показатель качества нашей работы — это ваши благодарные отзывы!</h2>
 
   <div class="reviews-platforms" aria-label="Площадки с отзывами">

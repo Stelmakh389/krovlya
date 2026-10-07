@@ -1,0 +1,16 @@
+.git/
+.gitignore
+.deployignore
+.known_hosts.deploy
+.htpasswd
+.DS_Store
+assets/.DS_Store
+.env
+.env.deploy
+deploy.sh
+node_modules/
+vendor/
+*.log
+*.zip
+index.html
+max-config.example.php

@@ -1,68 +1,72 @@
 (function () {
-  const root = document.querySelector('[data-projects]');
+  const carousels = Array.from(document.querySelectorAll('[data-projects-carousel]'));
 
-  if (!root) {
+  if (!carousels.length) {
     return;
   }
 
-  const tabs = Array.from(root.querySelectorAll('[data-project-tab]'));
-  const panels = Array.from(root.querySelectorAll('[data-project-panel]'));
+  const initCarousel = (root) => {
+    const viewport = root.querySelector('[data-projects-viewport]');
+    const track = root.querySelector('[data-projects-track]');
+    const slides = Array.from(root.querySelectorAll('.projects-carousel__slide'));
+    const dots = Array.from(root.querySelectorAll('[data-projects-dot]'));
+    const prev = root.querySelector('[data-projects-prev]');
+    const next = root.querySelector('[data-projects-next]');
 
-  const updateSlider = (slider, index) => {
-    const slides = Array.from(slider.querySelectorAll('.project-slider__slide'));
-    const counter = slider.querySelector('[data-project-counter]');
-    const nextIndex = (index + slides.length) % slides.length;
-
-    slides.forEach((slide, slideIndex) => {
-      slide.classList.toggle('is-active', slideIndex === nextIndex);
-    });
-
-    slider.dataset.slide = String(nextIndex);
-
-    if (counter) {
-      counter.textContent = `${nextIndex + 1} / ${slides.length}`;
-    }
-  };
-
-  const showProject = (index) => {
-    tabs.forEach((tab, tabIndex) => {
-      const isActive = tabIndex === index;
-
-      tab.classList.toggle('is-active', isActive);
-      tab.setAttribute('aria-selected', String(isActive));
-    });
-
-    panels.forEach((panel, panelIndex) => {
-      const isActive = panelIndex === index;
-
-      panel.hidden = !isActive;
-      panel.classList.toggle('is-active', isActive);
-    });
-  };
-
-  tabs.forEach((tab) => {
-    tab.addEventListener('click', () => {
-      showProject(Number(tab.dataset.projectTab));
-    });
-  });
-
-  root.addEventListener('click', (event) => {
-    const button = event.target.closest('[data-project-prev], [data-project-next]');
-
-    if (!button || !root.contains(button)) {
+    if (!viewport || !track || !slides.length) {
       return;
     }
 
-    const slider = button.closest('[data-project-slider]');
-    const currentIndex = Number(slider.dataset.slide || 0);
-    const direction = button.matches('[data-project-next]') ? 1 : -1;
+    let activeIndex = 0;
+    let startX = null;
 
-    updateSlider(slider, currentIndex + direction);
-  });
+    const setActive = (index) => {
+      activeIndex = (index + slides.length) % slides.length;
 
-  root.querySelectorAll('[data-project-slider]').forEach((slider) => {
-    updateSlider(slider, 0);
-  });
+      slides.forEach((slide, slideIndex) => {
+        slide.classList.toggle('is-active', slideIndex === activeIndex);
+      });
 
-  showProject(0);
+      dots.forEach((dot, dotIndex) => {
+        dot.classList.toggle('is-active', dotIndex === activeIndex);
+      });
+
+      const activeSlide = slides[activeIndex];
+      const slideCenter = activeSlide.offsetLeft + activeSlide.offsetWidth / 2;
+      const viewportCenter = viewport.clientWidth / 2;
+
+      track.style.transform = `translateX(${viewportCenter - slideCenter}px)`;
+    };
+
+    prev?.addEventListener('click', () => setActive(activeIndex - 1));
+    next?.addEventListener('click', () => setActive(activeIndex + 1));
+
+    dots.forEach((dot) => {
+      dot.addEventListener('click', () => setActive(Number(dot.dataset.projectsDot)));
+    });
+
+    viewport.addEventListener('pointerdown', (event) => {
+      startX = event.clientX;
+    });
+
+    viewport.addEventListener('pointerup', (event) => {
+      if (startX === null) {
+        return;
+      }
+
+      const distance = event.clientX - startX;
+      startX = null;
+
+      if (Math.abs(distance) < 40) {
+        return;
+      }
+
+      setActive(activeIndex + (distance < 0 ? 1 : -1));
+    });
+
+    window.addEventListener('resize', () => setActive(activeIndex));
+    requestAnimationFrame(() => setActive(slides.length > 2 ? 1 : 0));
+  };
+
+  carousels.forEach(initCarousel);
 }());

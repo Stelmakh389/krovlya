@@ -9,9 +9,10 @@
     left: 0;
     z-index: 99999;
     padding: 16px;
-    background: rgb(39 39 40 / 62%);
+    background: transparent;
     color: #272728;
     font-family: Gilroy, system-ui, sans-serif;
+    pointer-events: none;
 }
 
 .cookie-consent__settings[hidden],
@@ -30,6 +31,7 @@
     border-radius: 14px;
     background: #fff;
     box-shadow: 0 18px 50px rgb(0 0 0 / 18%);
+    pointer-events: auto;
 }
 
 .cookie-consent__title {
@@ -120,7 +122,7 @@
     border-radius: 10px;
     background: transparent;
     color: #272728;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
 }
 

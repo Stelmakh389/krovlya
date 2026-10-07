@@ -3,4 +3,8 @@ Thumbs.db
 node_modules/
 vendor/
 .env
+.env.deploy
+.known_hosts.deploy
 *.log
+/max-config.php
+*.zip

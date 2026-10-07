@@ -23,7 +23,7 @@
   </div>
 
   <div class="site-header__phone">
-    <a class="site-header__phone-link" href="tel:+78008885522">+7 (800) 888-55-22</a>
+    <a class="site-header__phone-link" href="tel:+79855193686">+7(985)519-36-86</a>
     <span class="site-header__schedule">Ежедневно с 9.00 до 21.00</span>
   </div>
 

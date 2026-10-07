@@ -1,4 +1,4 @@
-<footer class="site-footer">
+<footer class="site-footer" id="contacts">
   <div class="site-footer__content">
     <div class="site-footer__map">
       <iframe
@@ -23,7 +23,7 @@
 
       <div class="site-footer__contact-row">
         <span class="site-footer__label">Телефон:</span>
-        <a class="site-footer__value" href="tel:+78008885522">+7 (800) 888-55-22</a>
+        <a class="site-footer__value" href="tel:+79855193686">+7(985)519-36-86</a>
       </div>
 
       <div class="site-footer__contact-row">
@@ -47,9 +47,8 @@
   <div class="site-footer__bottom">
     <div class="site-footer__legal">
       <p>© 2025 Монтаж кровли “Под ключ”</p>
-      <p>Название организации: __________</p>
-      <p>ИНН: __________</p>
-      <p>ОГРН: __________</p>
+      <p>Кулдурой Вячеслав Владимирович</p>
+      <p>ИНН: 346000988120</p>
     </div>
     <a class="site-footer__brand" href="index.php" aria-label="Монтаж кровли в Москве и МО">
       <img src="assets/img/logo_white.svg" alt="">
@@ -61,6 +60,7 @@
     <nav class="site-footer__documents" aria-label="Документы">
       <a href="politika-konfidencialnosti.php">Политика обработки персональных данных</a>
       <a href="soglasie-na-obrabotku-personalnyh-dannyh.php">Согласие на обработку персональных данных</a>
+      <a href="polzovatelskoe-soglashenie.php">Пользовательское соглашение</a>
     </nav>
   </div>
 </footer>
